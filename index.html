@@ -1,3 +1,5 @@
+<time-line-container style="--start-year: 2009; --end-year: 2022; --end-month: 06;">
+
 <time-line>
   <h2></h2>
   <time-year>2009</time-year>
@@ -20,15 +22,15 @@
   <h2>Countries</h2>
   <time-span style="--start-year: 2009; --end-year: 2013; --end-month: 10;">France</time-span>
   <time-span style="--start-year: 2013; --start-month: 10; --end-year: 2017; --end-month: 8;">Germany</time-span>
-  <time-span style="--start-year: 2017; --start-month: 8; --end-year: 2022; --end-month: 06;">USA</time-span>
+  <time-span style="--start-year: 2017; --start-month: 8; --end-year: 2022; --end-month: 6;">USA</time-span>
 </time-line>
 
 <time-line>
   <h2>Cities</h2>
   <time-span style="--start-year: 2009; --end-year: 2013; --end-month: 10;">Paris</time-span>
   <time-span style="--start-year: 2013; --start-month: 10; --end-year: 2017; --end-month: 8;">Munich</time-span>
-  <time-span style="--start-year: 2017; --start-month: 8; --end-year: 2020;">San Francisco</time-span>
-  <time-span style="--start-year: 2020; --end-year: 2022; --end-month: 06;">Sunnyvale</time-span>
+  <time-span style="--start-year: 2017; --start-month: 8; --end-year: 2020; --end-month: 11">San Francisco</time-span>
+  <time-span style="--start-year: 2020; --start-month: 11 --end-year: 2022; --end-month: 6;">Sunnyvale</time-span>
 </time-line>
 
 <time-line>
@@ -37,14 +39,14 @@
   <time-span style="--start-year: 2010; --start-month: 9; --end-year: 2012;">Self employed</time-span>
   <time-span style="--start-year: 2012; --end-year: 2013; --end-month: 10;">Joshfire</time-span>
   <time-span style="--start-year: 2013; --start-month: 10; --end-year: 2014;">Definiens</time-span>
-  <time-span style="--start-year: 2014; --end-year: 2022; --end-month: 06;">Google</time-span>
+  <time-span style="--start-year: 2014; --end-year: 2022; --end-month: 6;">Google</time-span>
 </time-line>
 
 <time-line>
   <h2>Project</h2>
   <time-span style="--start-year: 2009; --end-year: 2009; --end-month: 11">Research</time-span>
   <time-span style="--start-year: 2009; --start-month: 11; --end-year: 2010; --end-month: 9">SwYm</time-span>
-  <time-span style="--start-year: 2010; --start-month: 9; --end-year: 2010; --end-month: 11;">*</time-span>
+  <time-span style="--start-year: 2010; --start-month: 9; --end-year: 2010; --end-month: 11;" class="empty"></time-span>
   <time-span style="--start-year: 2010; --start-month: 11; --end-year: 2012;">Beansight</time-span>
   <time-span style="--start-year: 2012; --end-year: 2013; --end-month: 10;">Factory</time-span>
   <time-span style="--start-year: 2013; --start-month: 10; --end-year: 2014;">TissueX</time-span>
@@ -52,9 +54,17 @@
   <time-span style="--start-year: 2015; --end-year: 2016; --end-month: 10;">Error Reporting</time-span>
   <time-span style="--start-year: 2016; --start-month: 10; --end-year: 2017; --end-month: 8;">Bazel</time-span>
   <time-span style="--start-year: 2017; --start-month: 8; --end-year: 2018;">App Engine</time-span>
-  <time-span style="--start-year: 2018; --start-month: 1; --end-year: 2022; --end-month: 06;">Cloud Run</time-span>
+  <time-span style="--start-year: 2018; --start-month: 1; --end-year: 2022; --end-month: 6;">Cloud Run</time-span>
 </time-line>
-  
+
+<time-line>
+  <h2>Children</h2>
+  <time-span style="--start-year: 2009; --end-year: 2019; --end-month: 11" class="empty"></time-span>
+  <time-span style="--start-year: 2019; --start-month: 11; --end-year: 2022; --end-month: 06;">Lucie</time-span>
+</time-line>
+
+</time-line-container>
+
 <style>
 :root {
   --size-month: 10px;
@@ -79,6 +89,11 @@ time-line:nth-child(2) { --n-line: 2 }
 time-line:nth-child(3) { --n-line: 3 }
 time-line:nth-child(4) { --n-line: 4 }
 time-line:nth-child(5) { --n-line: 5 }
+time-line:nth-child(6) { --n-line: 6 }
+time-line:nth-child(7) { --n-line: 7 }
+time-line:nth-child(8) { --n-line: 8 }
+time-line:nth-child(9) { --n-line: 9 }
+time-line:nth-child(10) { --n-line: 10 }
 
 /** TODO: find a way to not hardcode span number */
 time-line time-span:nth-child(1) { --n-span: 1 }
@@ -94,9 +109,20 @@ time-line time-span:nth-child(10) { --n-span: 10 }
 time-line time-span:nth-child(11) { --n-span: 11 }
 time-line time-span:nth-child(12) { --n-span: 12 }
 time-line time-span:nth-child(13) { --n-span: 13 }
+time-line time-span:nth-child(12) { --n-span: 14 }
+time-line time-span:nth-child(13) { --n-span: 15 }
+time-line time-span:nth-child(12) { --n-span: 16 }
+time-line time-span:nth-child(13) { --n-span: 17 }
+time-line time-span:nth-child(12) { --n-span: 18 }
+time-line time-span:nth-child(13) { --n-span: 19 }
+time-line time-span:nth-child(12) { --n-span: 20 }
 
 time-line time-span {
   background-color: hsl(calc((var(--n-line)-1) * 60 + 20 * var(--n-span)), 60%, 70%);
+}
+
+time-line time-span.empty {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 time-line time-span, time-line time-year {
@@ -113,12 +139,12 @@ time-line time-year {
   width: calc(var(--size-month) * 12 - 2 * var(--gap));
 }
 
-time-line time-span {
+time-line time-span, time-line-container {
   width: calc(
     (
       var(--end-year) * 12
       + 
-      (var(--end-month, 1) - 1)
+      (var(--end-month, 12) - 1)
       -
       var(--start-year) * 12
       -
