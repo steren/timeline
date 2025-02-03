@@ -49,7 +49,7 @@
             transform: translateX(-50%);
             font-size: 14px;
             color: #666;
-            --year-position: calc((var(--year) - var(--timeline-start-year)) / (var(--timeline-end-year) - var(--timeline-start-year)) * 100%);
+            --year-position: calc((attr(data-year type(<number>)) - var(--timeline-start-year)) / (var(--timeline-end-year) - var(--timeline-start-year)) * 100%);
             left: var(--year-position);
         }
 
@@ -148,20 +148,20 @@
 <body>
     <div class="timeline" data-start-year="2009" data-end-year="2022">
         <div class="timeline-header" aria-hidden="true">
-            <div class="year-marker" style="--year: 2009;">2009</div>
-            <div class="year-marker" style="--year: 2010;">2010</div>
-            <div class="year-marker" style="--year: 2011;">2011</div>
-            <div class="year-marker" style="--year: 2012;">2012</div>
-            <div class="year-marker" style="--year: 2013;">2013</div>
-            <div class="year-marker" style="--year: 2014;">2014</div>
-            <div class="year-marker" style="--year: 2015;">2015</div>
-            <div class="year-marker" style="--year: 2016;">2016</div>
-            <div class="year-marker" style="--year: 2017;">2017</div>
-            <div class="year-marker" style="--year: 2018;">2018</div>
-            <div class="year-marker" style="--year: 2019;">2019</div>
-            <div class="year-marker" style="--year: 2020;">2020</div>
-            <div class="year-marker" style="--year: 2021;">2021</div>
-            <div class="year-marker" style="--year: 2022;">2022</div>
+            <div class="year-marker" data-year="2009">2009</div>
+            <div class="year-marker" data-year="2010">2010</div>
+            <div class="year-marker" data-year="2011">2011</div>
+            <div class="year-marker" data-year="2012">2012</div>
+            <div class="year-marker" data-year="2013">2013</div>
+            <div class="year-marker" data-year="2014">2014</div>
+            <div class="year-marker" data-year="2015">2015</div>
+            <div class="year-marker" data-year="2016">2016</div>
+            <div class="year-marker" data-year="2017">2017</div>
+            <div class="year-marker" data-year="2018">2018</div>
+            <div class="year-marker" data-year="2019">2019</div>
+            <div class="year-marker" data-year="2020">2020</div>
+            <div class="year-marker" data-year="2021">2021</div>
+            <div class="year-marker" data-year="2022">2022</div>
         </div>
         <div class="timeline-row">
             <h2>Countries</h2>
