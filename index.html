@@ -90,8 +90,8 @@
         }
 
         .timeline-span {
-            --start-total-months: calc((var(--start-year) - var(--timeline-start-year)) * 12 + var(--start-month, 1) - 1);
-            --end-total-months: calc((var(--end-year) - var(--timeline-start-year)) * 12 + var(--end-month, 12) - 1);
+            --start-total-months: calc((attr(data-start-year type(<number>)) - var(--timeline-start-year)) * 12 + attr(data-start-month type(<number>), 1) - 1);
+            --end-total-months: calc((attr(data-end-year type(<number>)) - var(--timeline-start-year)) * 12 + attr(data-end-month type(<number>), 12) - 1);
             --start-percentage: calc(var(--start-total-months) / var(--timeline-total-months) * 100%);
             --end-percentage: calc(var(--end-total-months) / var(--timeline-total-months) * 100%);
             
@@ -168,50 +168,50 @@
         <div class="timeline-row">
             <h2>Countries</h2>
             <div class="timeline-content">
-                <div class="timeline-span" style="--start-year: 2009; --end-year: 2013; --end-month: 9;">France</div>
-                <div class="timeline-span" style="--start-year: 2013; --start-month: 10; --end-year: 2017; --end-month: 7;">Germany</div>
-                <div class="timeline-span" style="--start-year: 2017; --start-month: 8; --end-year: 2022; --end-month: 6;">USA</div>
+                <div class="timeline-span" data-start-year="2009" data-end-year="2013" data-end-month="9">France</div>
+                <div class="timeline-span" data-start-year="2013" data-start-month="10" data-end-year="2017" data-end-month="7">Germany</div>
+                <div class="timeline-span" data-start-year="2017" data-start-month="8" data-end-year="2022" data-end-month="6">USA</div>
             </div>
         </div>
         <div class="timeline-row">
             <h2>Cities</h2>
             <div class="timeline-content">
-                <div class="timeline-span" style="--start-year: 2009; --end-year: 2013; --end-month: 9;">Paris</div>
-                <div class="timeline-span" style="--start-year: 2013; --start-month: 10; --end-year: 2017; --end-month: 7;">Munich</div>
-                <div class="timeline-span" style="--start-year: 2017; --start-month: 8; --end-year: 2020; --end-month: 10">San Francisco</div>
-                <div class="timeline-span" style="--start-year: 2020; --start-month: 11; --end-year: 2022; --end-month: 6;">Sunnyvale</div>
+                <div class="timeline-span" data-start-year="2009" data-end-year="2013" data-end-month="9">Paris</div>
+                <div class="timeline-span" data-start-year="2013" data-start-month="10" data-end-year="2017" data-end-month="7">Munich</div>
+                <div class="timeline-span" data-start-year="2017" data-start-month="8" data-end-year="2020" data-end-month="10">San Francisco</div>
+                <div class="timeline-span" data-start-year="2020" data-start-month="11" data-end-year="2022" data-end-month="6">Sunnyvale</div>
             </div>
         </div>
         <div class="timeline-row">
             <h2>Employer</h2>
             <div class="timeline-content">
-                <div class="timeline-span" style="--start-year: 2009; --end-year: 2010; --end-month: 9">DS</div>
-                <div class="timeline-span" style="--start-year: 2010; --start-month: 9; --end-year: 2012; --end-month: 8;">Self employed</div>
-                <div class="timeline-span" style="--start-year: 2012; --start-month: 9; --end-year: 2013; --end-month: 9;">Joshfire</div>
-                <div class="timeline-span" style="--start-year: 2013; --start-month: 10; --end-year: 2014; --end-month: 4;">Definiens</div>
-                <div class="timeline-span" style="--start-year: 2014; --start-month: 5; --end-year: 2022; --end-month: 6;">Google</div>
+                <div class="timeline-span" data-start-year="2009" data-end-year="2010" data-end-month="9">DS</div>
+                <div class="timeline-span" data-start-year="2010" data-start-month="9" data-end-year="2012" data-end-month="8">Self employed</div>
+                <div class="timeline-span" data-start-year="2012" data-start-month="9" data-end-year="2013" data-end-month="9">Joshfire</div>
+                <div class="timeline-span" data-start-year="2013" data-start-month="10" data-end-year="2014" data-end-month="4">Definiens</div>
+                <div class="timeline-span" data-start-year="2014" data-start-month="5" data-end-year="2022" data-end-month="6">Google</div>
             </div>
         </div>
         <div class="timeline-row">
             <h2>Project</h2>
             <div class="timeline-content">
-                <div class="timeline-span" style="--start-year: 2009; --end-year: 2009; --end-month: 9;">Research</div>
-                <div class="timeline-span" style="--start-year: 2009; --start-month: 10; --end-year: 2010; --end-month: 8;">SwYm</div>
-                <div class="timeline-span" style="--start-year: 2010; --start-month: 9; --end-year: 2010; --end-month: 10;" class="empty"></div>
-                <div class="timeline-span" style="--start-year: 2010; --start-month: 9; --end-year: 2012; --end-month: 8;">Beansight</div>
-                <div class="timeline-span" style="--start-year: 2012; --start-month: 9; --end-year: 2013; --end-month: 9;">Factory</div>
-                <div class="timeline-span" style="--start-year: 2013; --start-month: 10; --end-year: 2014; --end-month: 4;">TissueX</div>
-                <div class="timeline-span" style="--start-year: 2014; --start-month: 5; --end-year: 2014; --end-month: 12;">Source Repo</div>
-                <div class="timeline-span" style="--start-year: 2015; --start-month: 1; --end-year: 2016; --end-month: 9;">Error Reporting</div>
-                <div class="timeline-span" style="--start-year: 2016; --start-month: 10; --end-year: 2017; --end-month: 7;">Bazel</div>
-                <div class="timeline-span" style="--start-year: 2017; --start-month: 8; --end-year: 2017; --end-month: 12;">App Engine</div>
-                <div class="timeline-span" style="--start-year: 2018; --start-month: 1; --end-year: 2022; --end-month: 6;">Cloud Run</div>
+                <div class="timeline-span" data-start-year="2009" data-end-year="2009" data-end-month="9">Research</div>
+                <div class="timeline-span" data-start-year="2009" data-start-month="10" data-end-year="2010" data-end-month="8">SwYm</div>
+                <div class="timeline-span empty" data-start-year="2010" data-start-month="9" data-end-year="2010" data-end-month="10"></div>
+                <div class="timeline-span" data-start-year="2010" data-start-month="9" data-end-year="2012" data-end-month="8">Beansight</div>
+                <div class="timeline-span" data-start-year="2012" data-start-month="9" data-end-year="2013" data-end-month="9">Factory</div>
+                <div class="timeline-span" data-start-year="2013" data-start-month="10" data-end-year="2014" data-end-month="4">TissueX</div>
+                <div class="timeline-span" data-start-year="2014" data-start-month="5" data-end-year="2014" data-end-month="12">Source Repo</div>
+                <div class="timeline-span" data-start-year="2015" data-start-month="1" data-end-year="2016" data-end-month="9">Error Reporting</div>
+                <div class="timeline-span" data-start-year="2016" data-start-month="10" data-end-year="2017" data-end-month="7">Bazel</div>
+                <div class="timeline-span" data-start-year="2017" data-start-month="8" data-end-year="2017" data-end-month="12">App Engine</div>
+                <div class="timeline-span" data-start-year="2018" data-start-month="1" data-end-year="2022" data-end-month="6">Cloud Run</div>
             </div>
         </div>
         <div class="timeline-row">
             <h2>Children</h2>
             <div class="timeline-content">
-                <div class="timeline-span" style="--start-year: 2019; --start-month: 11; --end-year: 2022; --end-month: 6;">Lucie</div>
+                <div class="timeline-span" data-start-year="2019" data-start-month="11" data-end-year="2022" data-end-month="6">Lucie</div>
             </div>
         </div>
     </div>
