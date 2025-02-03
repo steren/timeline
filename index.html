@@ -5,23 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Timeline with Color Themes</title>
     <style>
-        :root {
-            --timeline-height: 60px;
-            --timeline-bg: #ecf0f1;
-            --timeline-start-year: 2009;
-            --timeline-end-year: 2022;
-            --timeline-total-months: calc((var(--timeline-end-year) - var(--timeline-start-year)) * 12 + 12);
-            --header-height: 40px;
-            --title-width: 150px;
-
-            /* Color themes for each row */
-            --color-row-1: #3498db;
-            --color-row-2: #e74c3c;
-            --color-row-3: #2ecc71;
-            --color-row-4: #f39c12;
-            --color-row-5: #9b59b6;
-        }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -35,6 +18,21 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+
+            --timeline-height: 60px;
+            --timeline-bg: #ecf0f1;
+            --timeline-start-year: attr(data-start-year type(<number>));
+            --timeline-end-year: attr(data-end-year type(<number>));
+            --timeline-total-months: calc((var(--timeline-end-year) - var(--timeline-start-year)) * 12 + 12);
+            --header-height: 40px;
+            --title-width: 150px;
+
+            /* Color themes for each row */
+            --color-row-1: #3498db;
+            --color-row-2: #e74c3c;
+            --color-row-3: #2ecc71;
+            --color-row-4: #f39c12;
+            --color-row-5: #9b59b6;
         }
 
         .timeline-header {
@@ -148,7 +146,7 @@
     </style>
 </head>
 <body>
-    <div class="timeline">
+    <div class="timeline" data-start-year="2009" data-end-year="2022">
         <div class="timeline-header" aria-hidden="true">
             <div class="year-marker" style="--year: 2009;">2009</div>
             <div class="year-marker" style="--year: 2010;">2010</div>
